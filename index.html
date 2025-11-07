@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thikki Baa | Innovative Indian Mocktails</title>
+  <title>Thikki Baa</title>
 
   <!-- SEO Meta -->
   <meta name="description" content="Thikki Baa serves Indian-inspired mocktails with traditional flavours, available for events, weddings, and celebrations.">
@@ -29,6 +29,7 @@
     <a href="#services">Services</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
+    <a href="#booking">Quotes</a>
   </div>
 </nav>
 
@@ -51,7 +52,7 @@
 
 <!-- About Section -->
 <section id="about" class="content-section" data-animate>
-  <h2>About Us 🥭</h2>
+  <h2>About Us</h2>
   <div class="about-grid">
     <div class="about-text">
       <div class="about-text-content">
@@ -69,28 +70,28 @@
 
 <!-- Menu Section -->
 <section id="menu" class="content-section" data-animate>
-  <h2>Our Menu 🍹</h2>
+  <h2>Our Menu</h2>
   <img src="menu.png" alt="Thikki Baa Full Menu showcasing Indian-inspired mocktails" class="menu-image professional-shadow">
 </section>
 
 <!-- Services Section -->
 <section id="services" class="content-section" data-animate>
-  <h2>Events & Mobile Bar 🎪</h2>
+  <h2>Events & Mobile Bar</h2>
   <div class="services-cards">
     <div class="service-card professional-shadow">
       <h3>Bespoke Bar Experience</h3>
-      <p>Hire Thikki Baa for weddings, birthdays, and corporate events. We provide a customized, colorful Indian-inspired mobile bar setup to perfectly match your venue and theme.</p>
+      <p>Elevate your next event with Thikki Baa, the ultimate mobile bar service delivering a truly unforgettable experience. Forget standard bar setups—we bring a burst of color and unique charm with our distinctive Indian-inspired mobile bar. Designed to be a focal point, the Thikki Baa setup adds a vibrant, festive atmosphere to any occasion, be it a lavish wedding, a memorable birthday celebration, or a high-energy corporate event. We deliver a complete, curated bar environment that transforms your venue and perfectly complements the celebratory mood.</p>
     </div>
-    <div class="service-card professional-shadow eco-friendly-card">
+    <div class="service-card professional-shadow">
       <h3>Consciously Crafted</h3>
-      <p>We are proudly <strong>eco-friendly</strong>, using compostable cups and sustainable practices. All our ingredients are fresh, organic, and the entire menu is <strong>vegan-friendly</strong>.</p>
+      <p>At Thikki Baa, our commitment to an exceptional experience extends to the planet. We are proudly eco-friendly, consciously implementing sustainable practices and using compostable cups and napkins to minimize our environmental footprint at every event. We believe in purity and quality, which is why all the ingredients used in our unique drinks—from our vibrant garnishes to our fresh juices—are sourced as organic produce. Furthermore, our entire curated menu is intentionally designed to be 100% vegan-friendly, ensuring that every guest can enjoy our colorful creations without compromise.</p>
     </div>
   </div>
 </section>
 
 <!-- Gallery Section -->
 <section id="gallery" class="content-section" data-animate>
-  <h2>Gallery ✨</h2>
+  <h2>Gallery</h2>
   <div class="gallery-grid">
 
     <!-- Repeatable Gallery Items -->
@@ -189,25 +190,52 @@
   </div>
 </section>
 
+  <section id="quiz" class="content-section contact-section" data-animate>
+    <h2>Find Your Baa — Quick Quiz</h2>
+    <div class="card quiz" aria-live="polite">
+      <label>Pick a mood:</label>
+      <div>
+        <button class="quiz-btn" data-answer="spicy">Spicy & Bold</button> <!--Jamna-->
+        <button class="quiz-btn" data-answer="sweet">Sweet & Nostalgic</button><!--Amba-->
+        <button class="quiz-btn" data-answer="tangy">Tangy & Fresh</button><!--Kunwar-->
+        <button class="quiz-btn" data-answer="cool">Cool & Exotic</button><!--Paali-->
+        <button class="quiz-btn" data-answer="zingy">Zingy & Refreshing</button><!--Nandi-->
+        <button class="quiz-btn" data-answer="bold">Bold & Playful</button><!--Iccha-->
+      </div>
+      <div class="result" id="quizResult" hidden></div>
+    </div>
+  </section>
+
 <!-- Contact Section -->
 <section id="contact" class="content-section contact-section" data-animate>
-  <h2>Contact Us 📧</h2>
+  <h2>Contact Us</h2>
   <div class="contact-info">
     <p><strong>📍 Based in Johannesburg</strong></p>
-    <p>📞 +27 123 456 789</p>
+    <p>📞 +27 73 719 7535</p>
     <p><strong>📧 info@thikkibaa.com</strong></p>
   </div>
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="professional-shadow">
+</section>
+
+<section id="booking" class="content-section" data-animate>
+  <h2>Get a Quote</h2>
+  <form class="booking" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="professional-shadow">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Tell us about your event and desired date!" required></textarea>
+    <input type="text" name="address" placeholder="Event address" required>
+    <input type="number" name="contactNumber" placeholder="Contact number" required>
+    <input type="date" name="date" placeholder="Date of the event" required>
+    <input type="number" name="numGuest" placeholder="Number of guests" required>
+    <input type="time" name="timeStart" placeholder="Time of the event" required>
+    <input type="number" name="hours" placeholder="Number of hours" required>
+
+    <textarea name="notes" placeholder="Additional notes and details" required></textarea>
     <button type="submit" class="cta-btn">Send Booking Inquiry</button>
   </form>
 </section>
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2025 Thikki Baa | Indian-Inspired Mocktails</p>
+  <p>&copy; 2025 Thikki Baa</p>
   <p>Follow us on <a href="https://www.instagram.com/thikki_baa/">Instagram</a></p>
 </footer>
 
@@ -225,11 +253,59 @@ const observer = new IntersectionObserver(entries => {
 });
 document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 
-// Form feedback
-document.querySelector('form').addEventListener('submit', () => {
-  setTimeout(() => alert('Thank you! Your booking inquiry has been sent. 🍹'), 500);
+// ✅ Fix: Target the form properly before adding the event listener
+const form = document.querySelector('.booking');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.innerHTML = "<h3>Thank you! We'll be in touch soon 🍹</h3>";
+  });
+}
+
+// ✅ QUIZ FUNCTIONALITY
+document.querySelectorAll('.quiz-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const a = btn.dataset.answer;
+    const result = document.getElementById('quizResult');
+    let text = '';
+    let desc = '';
+
+    if (a === 'spicy') {
+      text = "🔥 You're Jamna Bhen — bold, lively, and unforgettable!";
+      desc = "Try <strong>Jamna Bhen’s Jal Raas</strong> — a zesty fusion of pineapple, lime, and a teasing hint of chilli heat.";
+    }
+    if (a === 'sweet') {
+      text = "🍯 You're Amba Bhen — sweet, warm, and nostalgic!";
+      desc = "Try <strong>Amba Bhen’s Aam Kesariya</strong> — a creamy mango-saffron dream that’s sunshine in a glass.";
+    }
+    if (a === 'tangy') {
+      text = "💜 You're Kunvar Bhen — tangy, vibrant, and full of flair!";
+      desc = "Try <strong>Kunvar Bhen’s Kokum Jalsa</strong> — a deep, spiced kokum drink that’s festive and mysterious.";
+    }
+    if (a === 'cool') {
+      text = "🌿 You're Paali Bhen — cool, calming, and effortlessly chic!";
+      desc = "Try <strong>Paali Bhen’s Gul Paan</strong> — a silky blend of coconut and paan that’s pure tropical comfort.";
+    }
+    if (a === 'zingy') {
+      text = "🍋 You're Nandi Bhen — light, crisp, and full of zest!";
+      desc = "Try <strong>Nandi Bhen’s Ganna Zest</strong> — sugarcane kissed with lemongrass and lime for a bright, refreshing twist.";
+    }
+    if (a === 'bold') {
+      text = "🍊 You're Iccha Bhen — playful, daring, and citrusy!";
+      desc = "Try <strong>Iccha Bhen’s Imbli Santra Sharbat</strong> — a tamarind-orange delight that’s tangy and fun.";
+
+    }
+
+    // Display result with styling
+    result.hidden = false;
+    result.innerHTML = `
+      <div class="quiz-result-card professional-shadow">
+        <h3>${text}</h3>
+        <p>${desc}</p>
+      </div>
+    `;
+  });
 });
 </script>
-
 </body>
 </html>
