@@ -16,6 +16,9 @@
   box-sizing: border-box;
 }
 
+.header-content h1 { font-size: clamp(2.5rem, 8vw, 6rem); }
+
+
 header {
   background-image: url('signage.jpg');
   background-size: cover; /* makes it fill the header nicely */
@@ -47,8 +50,6 @@ header {
   text-align: center;
   /* padding-top: 100px; */
 }
-
-
 
 /* Font and Body */
 body {
@@ -145,13 +146,13 @@ header {
   width: 100%; height: 100%;
   z-index: -1;
 }
-/* .header-overlay-color {
+.header-overlay-color {
   position: absolute;
   width: 100%; height: 100%;
   background: var(--color-header-bg);
   opacity: 0.4;
 } */
-/* .header-overlay-image {
+ .header-overlay-image {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -161,7 +162,7 @@ header {
   background-size: cover;
   mix-blend-mode: multiply;
   opacity: 1;
-} */
+}
 
 /* Content container */
 .header-content {
@@ -263,15 +264,70 @@ header {
   margin: 0 auto;
 }
 
-/* --- Services Section Cards FIX --- */
-.services-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+/* --- Services Section --- */
+#services {
+  background-color: var(--color-light-background, #fff8e7);
+  padding: 60px 20px;
   text-align: center;
 }
+
+#services h2 {
+  font-size: 2rem;
+  color: var(--color-primary, #b71c1c);
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--color-accent, #ffd700);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: #fff3e0;
+  flex: 1 1 400px;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+.service-card h3 {
+  color: var(--color-primary, #b71c1c);
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.service-card p {
+  color: var(--color-dark, #333);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 900px) {
+  .services-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    max-width: 90%;
+  }
+}
+
 
 /* --- Gallery FIX: Centering Items --- */
 .gallery-grid {
@@ -392,3 +448,112 @@ footer {
     font-size: 4rem;
   }
 }
+
+.quiz{display:grid;gap:12px;max-width:700px;margin:0 auto}
+.quiz .result{padding:12px;border-radius:10px;background:#fff;border:1px dashed #eee}
+
+.quiz-result-card {
+  background: #fff8e7;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 15px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.quiz-result-card h3 {
+  color: #b71c1c;
+  margin-bottom: 8px;
+}
+
+.quiz-result-card p {
+  font-style: italic;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- QUIZ STYLES --- */
+#quiz {
+  background-color: var(--color-light-background, #fff8e7);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.quiz label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--color-dark, #333);
+  margin-bottom: 20px;
+}
+
+.quiz-btn {
+  background: linear-gradient(135deg, var(--color-primary, #b71c1c), var(--color-secondary, #008080));
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.25s ease-in-out;
+}
+
+.quiz-btn:hover,
+.quiz-btn:focus {
+  transform: translateY(-4px) scale(1.05);
+  background: linear-gradient(135deg, var(--color-accent, #ffd700), var(--color-primary, #b71c1c));
+  color: var(--color-dark, #333);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  outline: none;
+}
+
+.quiz-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Make buttons wrap nicely on small screens */
+.quiz div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Quiz Result Styling (if not already added) */
+.quiz-result-card {
+  background: #fff8e7;
+  border: 2px solid var(--color-accent, #ffd700);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: fadeIn 0.6s ease;
+}
+
+.quiz-result-card h3 {
+  color: var(--color-primary, #b71c1c);
+  margin-bottom: 8px;
+}
+
+.quiz-result-card p {
+  font-style: italic;
+  color: var(--color-dark, #333);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
