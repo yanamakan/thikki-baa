@@ -20,7 +20,7 @@
 
 
 header {
-  background-image: url('signage.jpg');
+  background-image: url('header.png');
   background-size: cover; /* makes it fill the header nicely */
   background-position: center;
   height: 250px;
@@ -556,4 +556,5 @@ footer {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 
