@@ -253,15 +253,6 @@ const observer = new IntersectionObserver(entries => {
 });
 document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 
-// ✅ Fix: Target the form properly before adding the event listener
-const form = document.querySelector('.booking');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    form.innerHTML = "<h3>Thank you! We'll be in touch soon 🍹</h3>";
-  });
-}
-
 // ✅ QUIZ FUNCTIONALITY
 document.querySelectorAll('.quiz-btn').forEach(btn => {
   btn.addEventListener('click', () => {
