@@ -365,7 +365,7 @@ header {
 }
 
 /* --- Contact Form FIX: Stacking and Centering Fields --- */
-.contact-section {
+/* .contact-section {
   padding-bottom: 100px;
 }
 
@@ -402,16 +402,7 @@ form textarea {
 form button {
   width: 100%;
   margin-top: 10px;
-}
-
-/* --- Footer --- */
-footer {
-  text-align: center;
-  padding: 40px;
-  background: var(--color-light-background);
-  font-size: 1rem;
-  border-top: 5px solid var(--color-accent);
-}
+} */
 
 /* --- Media Queries (Responsiveness) --- */
 @media (max-width: 900px) {
@@ -431,11 +422,11 @@ footer {
     flex-direction: column;
   }
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   form input, form textarea {
     width: 100%;
   }
-}
+} */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -557,4 +548,325 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.quote-calculator {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 480px;
+  margin: 2rem auto;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
 
+.quote-calculator h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+input[type="number"], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.range-value {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+}
+
+.total-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.deposit-row {
+  font-size: 1rem;
+  color: #e67e22; /* Orange color for deposit attention */
+  font-weight: 600;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#book-btn {
+  display: block;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: opacity 0.3s;
+}
+
+#book-btn:hover {
+  opacity: 0.9;
+}
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh; /* Max height is 80% of screen */
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable Text Area */
+.terms-text {
+  overflow-y: auto; /* Scroll inside the box */
+  padding-right: 10px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.terms-text h3 {
+  margin-top: 1.5rem;
+  color: #d35400; /* Use your brand orange/spicy color */
+  border-bottom: 1px solid #c41f1f;
+  padding-bottom: 5px;
+}
+
+/* Close Button */
+.close-modal {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: black;
+}
+
+/* --- FOOTER STYLES --- */
+.site-footer {
+  background-color: #008080; /* Dark background */
+  color: #fff;
+  padding: 3rem 1rem 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 250px; /* Responsive columns */
+  margin-bottom: 1.5rem;
+}
+
+.footer-col h2 {
+  color: #e67e22; /* Your brand orange */
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  /* border-bottom: 1px solid #e67e22; */
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.footer-col p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.footer-links, .footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li, .footer-contact li {
+  margin-bottom: 0.8rem;
+}
+
+.site-footer a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #e67e22; /* Orange on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+/* Mobile responsive tweak */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* --- CONTACT FORM STYLING --- */
+
+/* 1. The Container Card */
+form.booking {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px; /* Soft rounded corners */
+  max-width: 600px;
+  margin: 2rem auto;   /* Center on page */
+  border: 1px solid #e0e0e0;
+  
+  /* The "Professional Shadow" look */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+}
+
+/* 2. The Form Groups (Spacing) */
+.form-group {
+  margin-bottom: 1.5rem; /* Breathable space between fields */
+}
+
+/* 3. The Labels */
+form.booking label {
+  display: block;
+  font-family: 'Playfair Display', serif; /* Brand Heading Font */
+  font-weight: 600; /* Semi-bold */
+  color: #333;      /* Dark grey for readability */
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* clean, modern look */
+}
+
+/* 4. The Inputs & Textarea */
+form.booking input,
+form.booking textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fcfcfc; /* Very subtle off-white */
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+/* 5. Active State (When user clicks to type) */
+form.booking input:focus,
+form.booking textarea:focus {
+  border-color: #d35400; /* Thikki Baa Spicy Orange */
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(211, 84, 0, 0.1); /* Subtle orange glow */
+}
+
+/* 6. Textarea Specifics */
+form.booking textarea {
+  resize: vertical; /* User can stretch height, but not width */
+  min-height: 120px;
+}
+
+/* 7. The Submit Button */
+form.booking .cta-btn {
+  width: 100%;
+  padding: 16px;
+  margin-top: 1rem;
+  background-color: #111; /* Classy Black */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif; /* Brand Heading Font */
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+form.booking .cta-btn:hover {
+  background-color: #d35400; /* Changes to Spicy Orange on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
