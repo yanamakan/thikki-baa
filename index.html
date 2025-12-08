@@ -5,19 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thikki Baa</title>
 
-  <!-- SEO Meta -->
   <meta name="description" content="Thikki Baa serves Indian-inspired mocktails with traditional flavours, available for events, weddings, and celebrations.">
   <meta name="keywords" content="Indian mocktails, Thikki Baa, mobile bar, vegan drinks, eco-friendly drinks">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navigation -->
 <nav>
   <div class="logo">
     <img src="logo.jpg" alt="Thikki Baa Logo">
@@ -28,12 +24,11 @@
     <a href="#menu">Menu</a>
     <a href="#services">Services</a>
     <a href="#gallery">Gallery</a>
+    <a href="#booking">Quote</a>
     <a href="#contact">Contact</a>
-    <a href="#booking">Quotes</a>
   </div>
 </nav>
 
-<!-- Header -->
 <header>
   <div class="header-background">
     <div class="header-overlay-color"></div>
@@ -50,7 +45,6 @@
   </div>
 </header>
 
-<!-- About Section -->
 <section id="about" class="content-section" data-animate>
   <h2>About Us</h2>
   <div class="about-grid">
@@ -68,13 +62,11 @@
   </div>
 </section>
 
-<!-- Menu Section -->
 <section id="menu" class="content-section" data-animate>
   <h2>Our Menu</h2>
   <img src="menu.png" alt="Thikki Baa Full Menu showcasing Indian-inspired mocktails" class="menu-image professional-shadow">
 </section>
 
-<!-- Services Section -->
 <section id="services" class="content-section" data-animate>
   <h2>Events & Mobile Bar</h2>
   <div class="services-cards">
@@ -89,12 +81,10 @@
   </div>
 </section>
 
-<!-- Gallery Section -->
 <section id="gallery" class="content-section" data-animate>
   <h2>Gallery</h2>
   <div class="gallery-grid">
 
-    <!-- Repeatable Gallery Items -->
     <div class="gallery-item professional-shadow">
       <div class="gallery-image-container">
         <img src="drinks.jpg" alt="A selection of Thikki Baa mocktails zested with pineapple, masala, and paan.">
@@ -158,7 +148,13 @@
       <div class="caption">Sugarcane infused with lemongrass and a lime spritzer for that perfect zing!</div>
     </div>
 
-    <!-- Team -->
+    <div class="gallery-item professional-shadow">
+      <div class="gallery-image-container">
+        <img src="muniyama.jpg" alt="Muniyamas Madras Heatwave">
+      </div>
+      <div class="caption">Muniyamma's Madras Heatwave is a blend of agave, nannari and green chilli!</div>
+    </div>
+
     <div class="gallery-item professional-shadow">
       <div class="gallery-image-container">
         <img src="team1.jpg" alt="Thikki Baa Team member serving mocktails">
@@ -187,6 +183,20 @@
       <div class="caption">The Thikki Baa Team</div>
     </div>
 
+    <div class="gallery-item professional-shadow">
+      <div class="gallery-image-container">
+        <img src="el.jpg" alt="Thikki Baa in East London">
+      </div>
+      <div class="caption">Thikki Baa popped up in East London for the Festival of Senses</div>
+    </div>
+
+    <div class="gallery-item professional-shadow">
+      <div class="gallery-image-container">
+        <img src="el1.jpg" alt="Thikki Baa in East London">
+      </div>
+      <div class="caption">The Thikki Baa team in East London</div>
+    </div>
+
   </div>
 </section>
 
@@ -195,18 +205,53 @@
     <div class="card quiz" aria-live="polite">
       <label>Pick a mood:</label>
       <div>
-        <button class="quiz-btn" data-answer="spicy">Spicy & Bold</button> <!--Jamna-->
-        <button class="quiz-btn" data-answer="sweet">Sweet & Nostalgic</button><!--Amba-->
-        <button class="quiz-btn" data-answer="tangy">Tangy & Fresh</button><!--Kunwar-->
-        <button class="quiz-btn" data-answer="cool">Cool & Exotic</button><!--Paali-->
-        <button class="quiz-btn" data-answer="zingy">Zingy & Refreshing</button><!--Nandi-->
-        <button class="quiz-btn" data-answer="bold">Bold & Playful</button><!--Iccha-->
-      </div>
+        <button class="quiz-btn" data-answer="spicy">Spicy & Bold</button> <button class="quiz-btn" data-answer="sweet">Sweet & Nostalgic</button><button class="quiz-btn" data-answer="tangy">Tangy & Fresh</button><button class="quiz-btn" data-answer="cool">Cool & Exotic</button><button class="quiz-btn" data-answer="zingy">Zingy & Refreshing</button><button class="quiz-btn" data-answer="bold">Bold & Playful</button><button class="quiz-btn" data-answer="fierce">Fierce & Sassy</button></div>
       <div class="result" id="quizResult" hidden></div>
     </div>
   </section>
 
-<!-- Contact Section -->
+<section id="booking" class="content-section" data-animate>
+  <h2>Get a quote</h2>
+  
+ <div class="quote-calculator">
+  <div class="form-group">
+    <label for="guest-count">Number of Guests</label>
+    <input type="number" id="guest-count" placeholder="e.g. 50" min="10">
+  </div>
+
+  <div class="form-group">
+    <label for="duration">Duration (Hours)</label>
+    <input type="range" id="duration" min="5" max="10" step="1" value="5" oninput="document.getElementById('duration-val').textContent = this.value">
+    <span class="range-value"><span id="duration-val">5</span> Hours</span>
+  </div>
+
+  <div class="form-group checkbox-group">
+    <label>
+      <input type="checkbox" id="ice-fee" checked disabled>
+      Standard Ice Service (Required)
+    </label>
+  </div>
+
+  <div class="total-section">
+    <div class="price-row">
+      <span>Estimated Total:</span>
+      <span id="total-price">R0.00</span>
+    </div>
+    <div class="price-row deposit-row">
+      <span>25% Deposit Required:</span>
+      <span id="deposit-price">R0.00</span>
+    </div>
+    
+    <p class="disclaimer">
+      *Estimates are subject to change. A 25% deposit is required to secure your date.
+      Overtime is billed at R80 per staff member per 30mins. 
+      See our <a href="#" class="terms-trigger" style="color: #06b7c7; text-decoration: underline;">Terms & Conditions</a>
+    </p>
+    <button id="book-btn">Request Formal Quote</button>
+  </div>
+</div>
+</section>
+
 <section id="contact" class="content-section contact-section" data-animate>
   <h2>Contact Us</h2>
   <div class="contact-info">
@@ -214,32 +259,140 @@
     <p>📞 +27 73 719 7535</p>
     <p><strong>📧 info@thikkibaa.com</strong></p>
   </div>
-</section>
-
-<section id="booking" class="content-section" data-animate>
-  <h2>Get a Quote</h2>
   <form class="booking" action="https://formspree.io/f/mwpyvear" method="POST" class="professional-shadow">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="address" placeholder="Event address" required>
-    <input type="number" name="contactNumber" placeholder="Contact number" required>
-    <input type="date" name="date" placeholder="Date of the event" required>
-    <input type="number" name="numGuest" placeholder="Number of guests" required>
-    <input type="time" name="timeStart" placeholder="Time of the event" required>
-    <input type="number" name="hours" placeholder="Number of hours" required>
+    
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
 
-    <textarea name="notes" placeholder="Additional notes and details" required></textarea>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="contactNumber">WhatsApp / Contact Number</label>
+      <input type="number" id="contactNumber" name="contactNumber" placeholder="073 123 4567" required>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Event Venue Address</label>
+      <input type="text" id="address" name="address" placeholder="123 Party Street, Johannesburg" required>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="timeStart">Service Start Time</label>
+      <input type="time" id="timeStart" name="timeStart" required>
+    </div>
+
+    <div class="form-group">
+      <label for="numGuest">Number of Guests</label>
+      <input type="number" id="numGuest" name="numGuest" placeholder="e.g. 50" required>
+    </div>
+
+    <div class="form-group">
+      <label for="hours">Duration (Hours)</label>
+      <input type="number" id="hours" name="hours" placeholder="e.g. 5" required>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Additional Notes / Special Requests</label>
+      <textarea id="notes" name="notes" placeholder="Tell us more about your event..." required rows="4"></textarea>
+    </div>
+
     <button type="submit" class="cta-btn">Send Booking Inquiry</button>
   </form>
 </section>
 
-<!-- Footer -->
 <footer>
-  <p>&copy; 2025 Thikki Baa</p>
-  <p>Follow us on <a href="https://www.instagram.com/thikki_baa/">Instagram</a></p>
+  <footer class="site-footer">
+  <div class="footer-content">
+    
+    <div class="footer-col">
+      <h2>Thikki Baa</h2>
+      <p>Shaking up the average beverage with flavours from your Ba's spice dabba. 100% Vegan & Eco-friendly.</p>
+    </div>
+
+    <div class="footer-col">
+      <h2>Quick Links</h2>
+      <ul class="footer-links">
+        <li><a href="#menu">Our Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking">Get a Quote</a></li>
+        <li><a href="#" class="terms-trigger">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h2>Contact Us</h2>
+      <ul class="footer-contact">
+        <li><a href="mailto:info@thikkibaa.com">📧 info@thikkibaa.com</a></li>
+        <li><a href="tel:+27737197535">📞 +27 73 719 7535</a></li>
+        <li>📍 Johannesburg, SA</li>
+        <li><a href="https://www.instagram.com/thikki_baa/" target="_blank">📸 Follow on Instagram</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Thikki Baa. All rights reserved.</p>
+  </div>
+</footer>
 </footer>
 
-<!-- Scripts -->
+<div id="terms-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Thikki Baa: Terms & Conditions</h2>
+    <div class="terms-text">
+      <h3>1. Booking and Payment</h3>
+      <p><strong>1.1. Deposit:</strong> A non-refundable deposit of 25% of the total estimated service fee is required to secure the Event date. The booking is not confirmed until the deposit is received.</p>
+      <p><strong>1.2. Final Payment:</strong> The remaining balance is due 15 days prior to the Event date. Failure to pay on time may result in cancellation with no refund of the deposit.</p>
+      <p><strong>1.3. Additional Costs:</strong> Any agreed-upon additions must be paid in full prior to the Event.</p>
+      <p><strong>1.4. Pricing:</strong> Prices are subject to change until the deposit is paid and booking confirmed.</p>
+
+      <h3>2. Cancellations and Changes</h3>
+      <p><strong>2.1. Cancellation by Client:</strong></p>
+      <ul>
+        <li>More than 60 days before: Deposit refunded.</li>
+        <li>30 days before: 20% of total service fee retained.</li>
+        <li>Less than 15 days before: 100% of total service fee due.</li>
+      </ul>
+      <p><strong>2.2. Postponement:</strong> We will try to transfer the booking to a new date. If we cannot accommodate the new date, the cancellation policy applies.</p>
+      <p><strong>2.3. Service Changes:</strong> Significant changes (e.g., guest count) must be requested in writing at least 14 days prior.</p>
+
+      <h3>3. Service Scope and Safety</h3>
+      <p><strong>3.1. Non-Alcoholic Service:</strong> We provide exclusively non-alcoholic beverages. We will not purchase, possess, or serve alcohol.</p>
+      <p><strong>3.2. Prohibited Items:</strong> We reserve the right to cease service if the Client or guests attempt to mix alcohol using our equipment. No refund will be provided.</p>
+      <p><strong>3.3. Allergies:</strong> Please inform us of severe allergies 14 days prior. Guests with allergies consume products at their own risk.</p>
+
+      <h3>4. Event Requirements</h3>
+      <p><strong>4.1. Access:</strong> We require clear access and setup 60 minutes prior to service start.</p>
+      <p><strong>4.2. Utilities:</strong> Client must provide access to power and a clean water source.</p>
+      <p><strong>4.3. Setup:</strong> Equipment must be set up on a stable, level surface clear of trip hazards.</p>
+
+      <h3>5. Staffing and Overtime</h3>
+      <p><strong>5.1. Duration:</strong> Minimum service duration is five hours.</p>
+      <p><strong>5.2. Overtime:</strong> Extensions are subject to agreement and billed at R80.00 per staff member per 30 minutes, due immediately after the Event.</p>
+
+      <h3>6. Weather</h3>
+      <p><strong>6.1. Outdoors:</strong> Client must provide adequate shelter (tent/canopy) to protect bar/staff from rain, sun, or wind.</p>
+      <p><strong>6.2. Severe Weather:</strong> We reserve the right to cease service if weather poses a safety risk. No refunds for inadequate shelter.</p>
+
+      <h3>7. Liability</h3>
+      <p><strong>7.1. Indemnity:</strong> Client agrees to indemnify the Company against claims arising from the Event, except in cases of gross negligence by the Company.</p>
+      <p><strong>7.2. Damage:</strong> Client is financially responsible for damage to equipment caused by guests or other vendors.</p>
+    </div>
+  </div>
+</div>
+
 <script>
 function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
@@ -286,6 +439,10 @@ document.querySelectorAll('.quiz-btn').forEach(btn => {
       desc = "Try <strong>Iccha Bhen’s Imbli Santra Sharbat</strong> — a tamarind-orange delight that’s tangy and fun.";
 
     }
+    if (a==='fierce'){
+      text="🌶️ You're Muniyamma — fierce, fiery and sassy!"
+      desc = "Try <strong>Muniyamma's Madras Heatwave</strong> — a daring blend of agave, nannari and green chilli."
+    }
 
     // Display result with styling
     result.hidden = false;
@@ -297,6 +454,122 @@ document.querySelectorAll('.quiz-btn').forEach(btn => {
     `;
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // --- THIKKI BAA PRICING CONFIGURATION ---
+  const pricing = {
+    setMenuPrice: 85,    // Price per guest (R85 set menu)
+    hourlyStaffRate: 70, // Cost per hour per staff member
+    staffRatio: 20,      // 1 staff member per 20 guests
+    baseSetupFee: 500,   // General setup/transport fee
+    iceFeeFlat: 300,     // FLAT fee for ice
+    depositPercentage: 0.25 // 25% Deposit
+  };
+  // ----------------------------------------
+
+  // Calculator Inputs
+  const guestsInput = document.getElementById('guest-count');
+  const durationInput = document.getElementById('duration');
+  
+  // Display Elements
+  const totalDisplay = document.getElementById('total-price');
+  const depositDisplay = document.getElementById('deposit-price');
+  
+  // Contact Form Inputs (We will auto-fill these)
+  const formGuestInput = document.querySelector('input[name="numGuest"]');
+  const formHoursInput = document.querySelector('input[name="hours"]');
+  const formNotesInput = document.querySelector('textarea[name="notes"]');
+  const bookButton = document.getElementById('book-btn');
+
+  function calculateQuote() {
+    let guests = parseInt(guestsInput.value) || 0;
+    let duration = parseInt(durationInput.value) || 5;
+
+    let staffCount = Math.ceil(guests / pricing.staffRatio) || 1;
+    
+    // Math
+    let alcoholCost = guests * pricing.setMenuPrice; 
+    let staffCost = staffCount * duration * pricing.hourlyStaffRate;
+    let iceCost = pricing.iceFeeFlat; 
+
+    let total = pricing.baseSetupFee + alcoholCost + staffCost + iceCost;
+    let deposit = total * pricing.depositPercentage;
+
+    // Formatting
+    const formatter = new Intl.NumberFormat('en-ZA', {
+      style: 'currency',
+      currency: 'ZAR'
+    });
+
+    totalDisplay.textContent = formatter.format(total);
+    depositDisplay.textContent = formatter.format(deposit);
+    
+    // Return values so we can use them in the button click
+    return { totalText: formatter.format(total), depositText: formatter.format(deposit) };
+  }
+
+  // --- BUTTON LOGIC: SCROLL & PRE-FILL ---
+  bookButton.addEventListener('click', function(e) {
+    e.preventDefault(); // Stop button from refreshing page
+
+    // 1. Get current calculator values
+    const guests = guestsInput.value;
+    const duration = durationInput.value;
+    const pricingResult = calculateQuote(); // Get the formatted prices
+
+    // 2. Pre-fill the Contact Form
+    if(formGuestInput) formGuestInput.value = guests;
+    if(formHoursInput) formHoursInput.value = duration;
+    
+    // 3. Add the price to the "Notes" section so you see what they saw
+    if(formNotesInput) {
+      formNotesInput.value = `Calculator Estimate: Total ${pricingResult.totalText} (Deposit: ${pricingResult.depositText}). \n\nAdditional Notes: `;
+    }
+
+    // 4. Smooth Scroll to the Contact Section
+    document.getElementById('contact').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  });
+
+  // Event Listeners for Calculator
+  [guestsInput, durationInput].forEach(input => {
+    input.addEventListener('input', calculateQuote);
+  });
+
+  // Run on load
+  calculateQuote();
+});
+
+// --- TERMS AND CONDITIONS MODAL LOGIC ---
+  const modal = document.getElementById("terms-modal");
+  const closeSpan = document.getElementsByClassName("close-modal")[0];
+  
+  // Select ALL links with class "terms-trigger"
+  const triggers = document.querySelectorAll(".terms-trigger");
+
+  triggers.forEach(btn => {
+    btn.onclick = function(e) {
+      e.preventDefault(); // Stop link from jumping to top
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden"; // Stop background scrolling
+    }
+  });
+
+  // Close the modal (x button)
+  closeSpan.onclick = function() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Re-enable scrolling
+  }
+
+  // Close if clicked outside the box
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  }
 </script>
 </body>
 </html>
